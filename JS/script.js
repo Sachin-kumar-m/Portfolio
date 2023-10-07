@@ -4,6 +4,22 @@ let progressPercentage = []
 let navBar = document.querySelector(".navbar-nav")
 let navItems = document.getElementsByClassName("nav-item")
 let navigate = document.querySelector(".navbar")
+
+window.addEventListener("scroll", function () {
+    let showArrow = document.querySelector(".back-to-top")
+    if (window.scrollY > 1266) {
+        showArrow.style.display="block"
+    }
+    else if (window.scrollY < 1266) {
+        showArrow.style.display="none"
+    }
+})
+
+
+setTimeout(() => {
+    loader = document.getElementById("loader")
+    loader.classList.remove("show")
+}, 1000);
 for (i = 0; i < skillName.length; i++) {
     progressPercentage.push(skillName[i].childNodes[3].innerText)
 }
@@ -16,7 +32,7 @@ navBar.addEventListener("click", function (e) {
         navItems[i].classList.remove("active")
     }
     e.target.classList.add("active")
-    
+
     if (e.target.innerText != "Home") {
         navigate.style.height = "10%"
     }
@@ -27,6 +43,7 @@ navBar.addEventListener("click", function (e) {
         }, 500)
     }
 })
+
 // document.addEventListener("scroll",function () {
 //     navigate.style.height = "10%"
 // })
