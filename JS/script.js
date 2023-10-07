@@ -5,6 +5,8 @@ let navBar = document.querySelector(".navbar-nav")
 let navItems = document.getElementsByClassName("nav-item")
 let navigate = document.querySelector(".navbar")
 
+// eventlistener added on window to check the scroll and show the moveup only 
+// when scroll has crossed 2 sections
 window.addEventListener("scroll", function () {
     let showArrow = document.querySelector(".back-to-top")
     if (window.scrollY > 1266) {
@@ -15,18 +17,21 @@ window.addEventListener("scroll", function () {
     }
 })
 
-
+// delay of 1 second to show the loader.
 setTimeout(() => {
     loader = document.getElementById("loader")
     loader.classList.remove("show")
 }, 1000);
+
+
 for (i = 0; i < skillName.length; i++) {
     progressPercentage.push(skillName[i].childNodes[3].innerText)
 }
-
 for (i = 0; i < progress.length; i++) {
     progress[i].style.width = progressPercentage[i]
 }
+
+// show active an inactive tabs in navBar
 navBar.addEventListener("click", function (e) {
     for (i = 0; i < navItems.length; i++) {
         navItems[i].classList.remove("active")
