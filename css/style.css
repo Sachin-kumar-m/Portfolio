@@ -312,7 +312,7 @@ a:focus {
 }
 
 .hero .hero-text .typed-text {
-    display: block;
+    position: relative;
     /* animation: typewriter 3s infinite; */
 }
 
