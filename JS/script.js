@@ -4,9 +4,10 @@ let progressPercentage = []
 let navBar = document.querySelector(".navbar-nav")
 let navItems = document.getElementsByClassName("nav-item")
 let navigate = document.querySelector(".navbar")
-
+let fullStack = document.querySelector(".typed-text")
 // eventlistener added on window to check the scroll and show the moveup only 
 // when scroll has crossed 2 sections
+
 window.addEventListener("scroll", function () {
     let showArrow = document.querySelector(".back-to-top")
     if (window.scrollY > 1266) {
@@ -21,6 +22,7 @@ window.addEventListener("scroll", function () {
 setTimeout(() => {
     loader = document.getElementById("loader")
     loader.classList.remove("show")
+    fullStack.classList.add("typewriter")
 }, 1000);
 
 
