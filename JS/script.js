@@ -23,7 +23,7 @@ setTimeout(() => {
     loader = document.getElementById("loader")
     loader.classList.remove("show")
     fullStack.classList.add("typewriter")
-}, 1000);
+}, 1500);
 
 
 for (i = 0; i < skillName.length; i++) {
