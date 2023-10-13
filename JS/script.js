@@ -5,6 +5,11 @@ let navBar = document.querySelector(".navbar-nav")
 let navItems = document.getElementsByClassName("nav-item")
 let navigate = document.querySelector(".navbar")
 let fullStack = document.querySelector(".typed-text")
+let sendBtn = document.querySelector("#sendMessageButton")
+let emailId = document.querySelector("#email");
+let contactForm = document.querySelector("#contactForm")
+let formSubject = document.querySelector("#subject")
+let formMessage = document.querySelector("#message")
 // eventlistener added on window to check the scroll and show the moveup only 
 // when scroll has crossed 2 sections
 
@@ -51,6 +56,10 @@ navBar.addEventListener("click", function (e) {
     }
 })
 
+sendBtn.addEventListener("click", function () {
+    console.log(emailId.value)
+    contactForm.setAttribute("action", `mailto:${emailId.value}?subject=${formSubject.value} mailto!&body=${formMessage.value}"`)
+})
 // document.addEventListener("scroll",function () {
 //     navigate.style.height = "10%"
 // })
