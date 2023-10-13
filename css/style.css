@@ -1392,35 +1392,35 @@ a:focus {
 
 
 /*******************************/
-/*********** Blog CSS **********/
+/*********** Article CSS **********/
 /*******************************/
-.blog {
+.Article {
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
 }
 
-.blog .blog-item {
+.Article .Article-item {
     position: relative;
     margin-bottom: 30px;
 }
 
-.blog .blog-img {
+.Article .Article-img {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.blog .blog-img img {
+.Article .Article-img img {
     width: 100%;
     transition: .5s;
 }
 
-.blog .blog-item:hover img {
+.Article .Article-item:hover img {
     transform: scale(1.1);
 }
 
-.blog .blog-text {
+.Article .Article-text {
     position: relative;
     padding: 30px;
     border-right: 1px solid rgba(0, 0, 0, .07);
@@ -1428,41 +1428,41 @@ a:focus {
     border-left: 1px solid rgba(0, 0, 0, .07);
 }
 
-.blog .blog-text h2 {
+.Article .Article-text h2 {
     font-size: 25px;
     font-weight: 600;
 }
 
-.blog .blog-text p {
+.Article .Article-text p {
     margin-bottom: 10px;
 }
 
-.blog .blog-item a.btn {
+.Article .Article-item a.btn {
     margin-top: 10px;
     padding: 8px 15px;
 }
 
-.blog .blog-item a.btn i {
+.Article .Article-item a.btn i {
     margin-left: 5px;
 }
 
-.blog .blog-meta {
+.Article .Article-meta {
     position: relative;
     display: flex;
     margin-bottom: 15px;
 }
 
-.blog .blog-meta p {
+.Article .Article-meta p {
     margin: 0 10px 0 0;
     font-size: 13px;
 }
 
-.blog .blog-meta i {
+.Article .Article-meta i {
     color: #414141;
     margin-right: 5px;
 }
 
-.blog .blog-meta p:last-child {
+.Article .Article-meta p:last-child {
     margin: 0;
 }
 
