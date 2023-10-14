@@ -21,7 +21,7 @@ async function newsApi() {
     for (i = 0; i < 2; i++) {
         newsArticles.push(json.articles[i])
     }
-    // console.log(newsArticles)
+    console.log(newsArticles)
     updateUI(newsArticles);
 }
 newsApi()
@@ -32,15 +32,15 @@ function updateUI(newsArticles) {
     let newsDates = document.querySelectorAll(".newsDate")
     let newsSources = document.querySelectorAll(".newsSource")
     let links = document.querySelectorAll(".readMore")
-    for (i = 0; i < 2; i++) { 
+    for (i = 0; i < 2; i++) {
         newsTitles[i].innerHTML = newsArticles[i].title
         newsDesciptions[i].innerHTML = newsArticles[i].description
-        if (newsArticles[i].urlToImage != null){
+        if (newsArticles[i].urlToImage != null) {
             newsImages[i].setAttribute("src", newsArticles[i].urlToImage)
         }
         newsDates[i].lastChild.data = newsArticles[i].publishedAt.substring(0, 9)
         newsSources[i].lastChild.data = newsArticles[i].source.name
-        links[i].setAttribute("href",newsArticles[i].url)
+        links[i].setAttribute("href", newsArticles[i].url)
     }
 }
 
@@ -48,10 +48,10 @@ function updateUI(newsArticles) {
 window.addEventListener("scroll", function () {
     let showArrow = document.querySelector(".back-to-top")
     if (window.scrollY > 1266) {
-        showArrow.style.display="block"
+        showArrow.style.display = "block"
     }
     else if (window.scrollY < 1266) {
-        showArrow.style.display="none"
+        showArrow.style.display = "none"
     }
 })
 
@@ -60,7 +60,7 @@ setTimeout(() => {
     loader = document.getElementById("loader")
     loader.classList.remove("show")
     fullStack.classList.add("typewriter")
-},1500);
+}, 1500);
 
 
 for (i = 0; i < skillName.length; i++) {
