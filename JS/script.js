@@ -32,11 +32,12 @@ function updateUI(newsArticles) {
     let newsDates = document.querySelectorAll(".newsDate")
     let newsSources = document.querySelectorAll(".newsSource")
     let links = document.querySelectorAll(".readMore")
-    // console.log()
     for (i = 0; i < 2; i++) { 
         newsTitles[i].innerHTML = newsArticles[i].title
         newsDesciptions[i].innerHTML = newsArticles[i].description
-        newsImages[i].setAttribute("src", newsArticles[i].urlToImage)
+        if (newsArticles[i].urlToImage != null){
+            newsImages[i].setAttribute("src", newsArticles[i].urlToImage)
+        }
         newsDates[i].lastChild.data = newsArticles[i].publishedAt.substring(0, 9)
         newsSources[i].lastChild.data = newsArticles[i].source.name
         links[i].setAttribute("href",newsArticles[i].url)
