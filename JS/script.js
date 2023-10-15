@@ -13,6 +13,7 @@ let formMessage = document.querySelector("#message")
 // eventlistener added on window to check the scroll and show the moveup only 
 // when scroll has crossed 2 sections
 
+// get the response from the api
 async function newsApi() {
     var url = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=380539d5ba42403ea622428379772676';
     let response = await fetch(url)
@@ -22,9 +23,12 @@ async function newsApi() {
         newsArticles.push(json.articles[i])
     }
     console.log(newsArticles)
+    // send the api resoponse to a updateUI function
     updateUI(newsArticles);
 }
 newsApi()
+
+// function to update the UI with the api resoponse
 function updateUI(newsArticles) {
     let newsTitles = document.querySelectorAll(".newstitle")
     let newsDesciptions = document.querySelectorAll(".newsDescription")
@@ -40,7 +44,7 @@ function updateUI(newsArticles) {
         }
         newsDates[i].lastChild.data = newsArticles[i].publishedAt.substring(0, 9)
         newsSources[i].lastChild.data = newsArticles[i].source.name
-        links[i].setAttribute("href", newsArticles[i].url)
+        links[i].setAttribute("href", newsArticles[i].url);
     }
 }
 
@@ -55,7 +59,7 @@ window.addEventListener("scroll", function () {
     }
 })
 
-// delay of 1 second to show the loader.
+// delay of 1.5 second to show the loader.
 setTimeout(() => {
     loader = document.getElementById("loader")
     loader.classList.remove("show")
