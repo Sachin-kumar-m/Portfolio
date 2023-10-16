@@ -24,7 +24,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #EF233C;
+    color: #65272f;
     outline: none;
     text-decoration: none;
 }
@@ -1408,12 +1408,14 @@ a:focus {
 .Article .Article-img {
     position: relative;
     width: 100%;
+    max-height: 60%;
     overflow: hidden;
 }
 
 .Article .Article-img img {
     width: 100%;
     transition: .5s;
+    height: 20rem;
 }
 
 .Article .Article-item:hover img {
@@ -1423,6 +1425,8 @@ a:focus {
 .Article .Article-text {
     position: relative;
     padding: 30px;
+    max-height: 60%;
+
     border-right: 1px solid rgba(0, 0, 0, .07);
     border-bottom: 1px solid rgba(0, 0, 0, .07);
     border-left: 1px solid rgba(0, 0, 0, .07);
@@ -1431,11 +1435,16 @@ a:focus {
 .Article .Article-text h2 {
     font-size: 25px;
     font-weight: 600;
+    max-height: 63px;
+    overflow: scroll;
 }
 
 .Article .Article-text p {
     margin-bottom: 10px;
+    max-height: 45px;
+    overflow: scroll;
 }
+
 
 .Article .Article-item a.btn {
     margin-top: 10px;
