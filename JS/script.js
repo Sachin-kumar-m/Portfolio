@@ -17,7 +17,8 @@ let formMessage = document.querySelector("#message")
 async function newsApi() {
     var url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=380539d5ba42403ea622428379772676';
     let response = await fetch(url)
-    let json = await response.json()
+    let json = await response.json().then(console.log("hitting the api"))
+    console.log(`list of related articles`,json.articles)
     let newsArticles = []
     for (i = 0; i < 2; i++) {
         newsArticles.push(json.articles[i])
