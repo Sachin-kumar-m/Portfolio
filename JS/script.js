@@ -15,7 +15,7 @@ let formMessage = document.querySelector("#message")
 
 // get the response from the api
 async function newsApi() {
-    var url = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=380539d5ba42403ea622428379772676';
+    var url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=380539d5ba42403ea622428379772676';
     let response = await fetch(url)
     let json = await response.json()
     let newsArticles = []
@@ -66,7 +66,7 @@ setTimeout(() => {
     fullStack.classList.add("typewriter")
 }, 1500);
 
-
+// update the progress bar
 for (i = 0; i < skillName.length; i++) {
     progressPercentage.push(skillName[i].childNodes[3].innerText)
 }
@@ -92,10 +92,13 @@ navBar.addEventListener("click", function (e) {
     }
 })
 
+// email template
 sendBtn.addEventListener("click", function () {
-    console.log(emailId.value)
+    console.log(`sending email to ${emailId.value}`)
     contactForm.setAttribute("action", `mailto:${emailId.value}?subject=${formSubject.value} mailto!&body=${formMessage.value}"`)
 })
+
+
 // document.addEventListener("scroll",function () {
 //     navigate.style.height = "10%"
 // })
