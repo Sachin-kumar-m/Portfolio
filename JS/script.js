@@ -23,7 +23,6 @@ async function newsApi() {
     for (i = 0; i < 2; i++) {
         newsArticles.push(json.articles[i])
     }
-    console.log(newsArticles)
     // send the api resoponse to a updateUI function
     updateUI(newsArticles);
 }
