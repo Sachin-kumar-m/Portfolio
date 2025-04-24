@@ -67,12 +67,7 @@ setTimeout(() => {
 }, 1500);
 
 // update the progress bar
-for (i = 0; i < skillName.length; i++) {
-    progressPercentage.push(skillName[i].childNodes[3].innerText)
-}
-for (i = 0; i < progress.length; i++) {
-    progress[i].style.width = progressPercentage[i]
-}
+
 
 // show active an inactive tabs in navBar
 navBar.addEventListener("click", function (e) {
@@ -98,6 +93,17 @@ sendBtn.addEventListener("click", function () {
     contactForm.setAttribute("action", `mailto:${emailId.value}?subject=${formSubject.value} mailto!&body=${formMessage.value}"`)
 })
 
+window.addEventListener("scroll", function () {
+    // if (window.scrollY === 512) {
+        for (i = 0; i < skillName.length; i++) {
+            progressPercentage.push(skillName[i].childNodes[3].innerText)
+        }
+        for (i = 0; i < progress.length; i++) {
+            progress[i].style.width = progressPercentage[i]
+        }
+    // }
+    
+})
 
 // document.addEventListener("scroll",function () {
 //     navigate.style.height = "10%"
